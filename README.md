@@ -1,4 +1,6 @@
-# NINJA Nav
+# Vespa Nav
+
+Vespa spa Nav is an 2D mapping robot platform built on the ESP32 architecture. It is designed to navigate indoor environments, detect obstacles via ultrasonic sensors, and generate real-time occupancy grid maps accessible through a custom web interface.
 
 Summary
 - Hardware components
@@ -6,8 +8,6 @@ Summary
 - Description files
 - System features
 - Results
-
-  spa Nav is an autonomous 2D mapping robot platform built on the ESP32 architecture. It is designed to navigate indoor environments, detect obstacles via ultrasonic sensors, and generate real-time occupancy grid maps accessible through a custom web interface.
 
 *Figure 1: Prototype hardware platform.*
 
@@ -26,7 +26,7 @@ Summary
 
 The firmware utilizes FreeRTOS to manage hardware tasks and system stability:
 
-* **TaskMapeamento:** It triggers ultrasonic sensors using a dynamic timeout based, applies median filtering, and projects obstacles onto a 100x100 grid matrix using trigonometric calculations. Each pixel i equal to 5cm, so in a 100x100 maping area is equal to 25m²
+* **TaskMapeamento:** It triggers ultrasonic sensors using a dynamic timeout based, applies median filtering, and projects obstacles onto a 100x100 grid matrix using trigonometric calculations. Each pixel are equal to 5cm, so in a 100x100 maping area is equal to 25m²
 * **TaskMPU:** Operates on Core 0. Handles I2C communication with the MPU6050. It implements a complementary filter to merge accelerometer and gyroscope data, providing stable yaw values for heading compensation.
 * **WebSocket Server:** Uses `ESPAsyncWebServer` for asynchronous communication. It handles joystick input for teleoperation, configuration parameters (calibration), and streams the occupancy grid to the client.
 
