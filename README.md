@@ -2,7 +2,8 @@
 
 Vespa Nav is an autonomous 2D mapping robot platform built on the ESP32 architecture. It is designed to navigate indoor environments, detect obstacles via ultrasonic sensors, and generate real-time occupancy grid maps accessible through a custom web interface.
 
-*Figure 1: Prototype hardware platform.*
+
+[*Figure 1: Prototype hardware platform.*](https://github.com/dyonataferreira/Maping-robot/blob/main/images/figure%201.jpeg)
 
 ## Hardware Components
 
