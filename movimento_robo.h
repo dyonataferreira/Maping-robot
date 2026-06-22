@@ -76,23 +76,23 @@ void processarComandoJoystick(int velocidade, int angulo) {
 
   if (vE == 0 && vD == 0) {
     motores.stop();
-    /*if (estavaAndando) {
+    if (estavaAndando) {
       // Só envia log se passou 250ms desde a última mensagem
       if (millis() - tempoUltimoLog > 1000) {
         logEvento("A05", "Motores parados");
         tempoUltimoLog = millis();
       }
       estavaAndando = false;
-    }*/
+    }
   } else {
     motores.turn(vE, vD);
-    /*if (!estavaAndando) {
+    if (!estavaAndando) {
       // Só envia log se passou 250ms desde a última mensagem
       if (millis() - tempoUltimoLog > 1000) {
         logEvento("A06", "Movimento iniciado");
         tempoUltimoLog = millis();
       }
       estavaAndando = true;
-    }*/
+    }
   }
 }
